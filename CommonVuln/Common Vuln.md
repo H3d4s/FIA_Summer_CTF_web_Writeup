@@ -26,7 +26,7 @@ After login, we got a notice that
  - We already know that it has a CVE, and the next simple work is find a POC to exploit that CVE. (https://github.com/KrE80r/webmin_cve-2019-12840_poc)
  
 ![exploit.png](exploit.png)
-- After get the shell, let's spawn tty shell first
+- After getting the shell, let's spawn tty shell first
 ```
 python -c 'import pty; pty.spawn("/bin/bash")'
 export TERM=xterm

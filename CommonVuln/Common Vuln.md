@@ -24,7 +24,7 @@ After login, we got a notice that
  ![webmindashboard](webmindashboard.png)
  - Search vuln for that webapp with this version, and we got a CVE `[CVE-2019-12840](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12840)`
  - We already know that it has a CVE, and the next simple work is find a POC to exploit that CVE. (https://github.com/KrE80r/webmin_cve-2019-12840_poc)
- 
+ - Here I built this server on my local machine so that I do not need to NAT port or use TCP Tunnel. If you are not in the same network with server, you can use some TCP Tunnel to forward the connection to your IP (Example: ngrok, localhost.run,...)
 ![exploit.png](exploit.png)
 - After getting the shell, let's spawn tty shell first
 ```

